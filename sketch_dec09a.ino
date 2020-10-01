@@ -64,11 +64,11 @@ void loop() {
     //Serial.write(stringSD); 
 
     //Write to SD card
-    sdFile = SD.open("data.txt", FILE_WRITE);
-    if(sdFile)
+    sdFile = SD.open("data.txt", FILE_WRITE);   //opens a file data.txt 
+    if(sdFile)                                  //if file is open without errors then only data is written in data.txt
     {
       sdFile.write(stringSD);
-      sdFile.close();
+      sdFile.close();                           //to close the file
     }
 
     //Read SD card
@@ -88,7 +88,7 @@ void loop() {
   //Serial.write("\n");
 
   count++;
-  delay(2000);
+  delay(2000);                          //for delay generation of 2sec
 }
 
 
